@@ -222,3 +222,25 @@ nav a {
     display: inherit;
     color: #aa5500;
 }
+
+article, section, #intro {
+   position: absolute; 
+}
+
+#intro {
+   z-index: 1; 
+}
+
+#content>*:not(:target,#intro){
+    z-index:                        -1;
+}
+:target {
+    z-index: 2;
+}
+::selection {
+    background-color: #ff8811;
+    color: #ffffff;
+}
+:root {
+    background-color: #432100;
+}
