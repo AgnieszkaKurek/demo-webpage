@@ -244,3 +244,21 @@ article, section, #intro {
 :root {
     background-color: #432100;
 }
+.required {
+   background-color: #ffeddb; 
+}
+:valid {
+    background-color: #ffffff;
+}
+:valid::-webkit-input-placeholder {
+    color:  #aa5500;
+    font-style: italic;
+}
+:invalid::-webkit-input-placeholder
+{
+    color:  #aa5500;
+    font-style: italic;
+}
+
+:not([type=submit]):optional {
+    border-style: dashed;
