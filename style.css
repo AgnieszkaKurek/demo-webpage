@@ -166,3 +166,33 @@ footer p:after {
     left:                           2em;
 }
 /*#endregion*/
+
+@font-face {
+    font-family: Aaargh;
+    src: url('../fonts/Aaargh-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: Dj;
+    src: url('../fonts/Dj-webfont.woff') format('woff');
+}
+
+body {
+    font-family: Aaargh, Arial;
+}
+
+#title, #subtitle {
+   font-family: Dj, Script; 
+}
+
+#title {
+   text-shadow:  0.16em  0.16em  0.5em #aa5500;
+}
+
+h1, h2 {
+    
+   text-shadow:  0.16em  0.016em  0.25em #aa5500;
+}
+
+nav a {
+    text-shadow:  0.16em 0.16em  0.16em #ffbb77;
+}
