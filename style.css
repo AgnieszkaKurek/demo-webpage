@@ -196,3 +196,29 @@ h1, h2 {
 nav a {
     text-shadow:  0.16em 0.16em  0.16em #ffbb77;
 }
+
+#topics li:nth-child(3n) {
+    background-color: #ffbb77;
+}
+
+#topics li:nth-child(3n-1) {
+    background-color: #ffd4a8;
+}
+
+#topics li:nth-child(3n-2) {
+    background-color: #ffeddb;
+}
+
+#topics li h1 {
+    font-size: 1em;
+}
+
+#topics li :hover {
+    background-color: #432100;
+    color: #ffeddb;
+}
+
+#topics li :hover p {
+    display: inherit;
+    color: #aa5500;
+}
