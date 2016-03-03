@@ -292,6 +292,12 @@ article, section, #intro {
 }
 
 nav a {
-    color: transparent;
-    
+    color: rgba(0, 0, 0, 0); 
+}
+
+:invalid:focus {
+    background-color: rgba(67, 33, 0, 0.22);
+}
+#title{
+    color: hsla(210, 100%, 10%, 0.75);
 }
