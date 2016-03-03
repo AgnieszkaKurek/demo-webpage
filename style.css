@@ -265,7 +265,11 @@ article, section, #intro {
 }
 #topics ul {
     -webkit-column-count: 3;
-    column-count: 3;
-    
-    
+    column-count: 3; 
+}
+
+#about {
+    display: -webkit-box;
+    display: -ms-box;
+    display: box;
 }
