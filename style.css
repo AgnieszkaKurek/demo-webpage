@@ -262,3 +262,10 @@ article, section, #intro {
 
 :not([type=submit]):optional {
     border-style: dashed;
+}
+#topics ul {
+    -webkit-column-count: 3;
+    column-count: 3;
+    
+    
+}
