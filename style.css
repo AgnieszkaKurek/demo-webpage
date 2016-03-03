@@ -169,11 +169,11 @@ footer p:after {
 
 @font-face {
     font-family: Aaargh;
-    src: url('../fonts/Aaargh-webfont.woff') format('woff');
+    src: url('Aaargh-webfont.woff') format('woff');
 }
 @font-face {
     font-family: Dj;
-    src: url('../fonts/Dj-webfont.woff') format('woff');
+    src: url('Dj-webfont.woff') format('woff');
 }
 
 body {
@@ -272,4 +272,9 @@ article, section, #intro {
     display: -webkit-box;
     display: -ms-box;
     display: box;
+    background: url('css3logo.png') bottom left,
+                url('about_palermo_right.png')top right,
+                #ffffff;
+    background-repeat: no-repeat;
+    background-size: auto, contain;           
 }
