@@ -278,3 +278,20 @@ article, section, #intro {
     background-repeat: no-repeat;
     background-size: auto, contain;           
 }
+
+#title:hover {
+    opacity: 0.75;  
+}
+
+#subtitle {
+    opacity: 0.75;
+}
+
+#subtitle:hover {
+    opacity: 1;
+}
+
+nav a {
+    color: transparent;
+    
+}
