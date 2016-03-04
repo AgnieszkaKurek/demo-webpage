@@ -320,3 +320,7 @@ body {
     background: -ms-linear-gradient(bottom, #FFFFFF 50%, #00AAAA 50%); /* IE10 */ 
     background: linear-gradient(#ffffff, #00aaaa);/*future CSS3browsers*/
 }
+
+input {
+    border-radius: 1em;
+}
