@@ -380,3 +380,13 @@ article, section {
     transform:          scale(1.25) skew(44deg, -4deg);
 }
 
+#title {
+    -webkit-transform: all 3s;
+    -ms-transform: all 3s;
+}
+#title:hover {
+    color: #ffffff;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+}
+
