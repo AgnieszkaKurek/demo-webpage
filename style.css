@@ -483,6 +483,15 @@ article, section {
         transform:          scale(1.15);
     }
 }
+.no-textshadow nav a {
+    color: #ffbb77;
+    font-weight: bold;
+}
+
+.no-textshadow nav a :hover {
+    color: #ffeddb;
+}
+
 
 
 /* taken from layout */
