@@ -36,7 +36,13 @@
 $(function () {
 
     // behavior if :target not supported 
-
+if (!CSS3Demos.isSelectorSupported(":target" {
+    var pages = $("#topics, #about, #contact, #intro");
+    $("nav a").click(function () {
+        pages.css("z-index", "-1");
+        $($(this).attr("href")).css("z-index","2");
+    });
+}
     // toggle animation by click
 
 });
