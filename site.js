@@ -1,4 +1,7 @@
-﻿var CSS3Demos = (function () {
+﻿ď»ż//#region CSSDemos.isSelectorSupported
+
+
+var CSS3Demos = (function () {
     function isSelectorSupported(anySelector) {
         var newStyle = document.createElement("style"),
                 cssRule = anySelector + "{}",
@@ -31,12 +34,13 @@
         isSelectorSupported: isSelectorSupported
     };
 })();
+//#endregion
 
 // executes when page is loaded
 $(function () {
 
     // behavior if :target not supported 
-if (!CSS3Demos.isSelectorSupported(":target" {
+  if (!CSS3Demos.isSelectorSupported(":target")) {
     var pages = $("#topics, #about, #contact, #intro");
     $("nav a").click(function () {
         pages.css("z-index", "-1");
@@ -44,5 +48,13 @@ if (!CSS3Demos.isSelectorSupported(":target" {
     });
 }
     // toggle animation by click
+    var msg = $("#intro div");
+    $("nav a [href=#intro]").click(function () {
+        msg.toggleClass("introClicked");
+    });
+    $("nav a:not([href=#intro])").click(function () {
+        msg.removeClass("introClicked");
+    });
 
+msg.toggleClass("introClicked"); 
 });

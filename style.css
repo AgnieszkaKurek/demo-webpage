@@ -1,19 +1,20 @@
 @charset 'utf-8';
-/*  HEX         
-    #000000     
-    #FFFFFF     
-    #555555     
-    #0055AA     
-    #00AAAA     
-    #AA8D00     
-    #432100     
-    #AA5500     
-    #FF8811     
-    #FFBB77     
-    #FFD4A8     
-    #FFEDDB     
-*/
+/*#region Colors */
 
+/*  HEX         RGB             HSL
+    #000000     0,0,0           0,0%,0%
+    #FFFFFF     255,255,255     0,0%,100%
+    #555555     85,85,85        0,0%,33%
+    #0055AA     0,85,170        210,100%,33%
+    #00AAAA     0,170,170       180,100%,33%
+    #AA8D00     170,141,0       50,100%,33%
+    #432100     67,33,0         30,100%,13%
+    #AA5500     170,85,0        30,100%,33%
+    #FF8811     255,136,17      30,100%,53%
+    #FFBB77     255,187,119     30,100%,73%
+    #FFD4A8     255,212,168     30,100%,83%
+    #FFEDDB     255,237,219     30,100%,93%
+/*#endregion*/
 /*#region CSS Reset */
 
 /** http://meyerweb.com/eric/tools/css/reset/ **/
@@ -141,6 +142,7 @@ footer p:after {
 }
 #subtitle {
     font-size:                      3em;
+     color:                          #AA5500;
 }
 #content {
     position:                       relative;
@@ -165,7 +167,27 @@ footer p:after {
     top:                            10em;   
     left:                           2em;
 }
+#intro div {
+    position: relative;
+    -webkit-transition:  all 2s;
+    -ms-transition: all 2s; 
+    transition: all 2s;
+    color: #555555;
+}
+#intro div.introClicked {
+
+    top: 0.5em;
+    left: 0.5em;
+    -webkit-transform: rotate(10deg);
+    -ms-transform:  rotate(10deg);
+    transform:  rotate(10deg);
+    font-family: DJ;
+    font-size: 5em;
+    font-weight: bold;
+    color:#00AAAA;
+}
 /*#endregion*/
+/*#region Content */
 
 @font-face {
     font-family: Aaargh;
@@ -195,6 +217,10 @@ h1, h2 {
 
 nav a {
     text-shadow:  0.16em 0.16em  0.16em #ffbb77;
+}
+nav a:last-child {
+    float:                          right;
+    padding-right:                  1em;
 }
 
 #topics li:nth-child(3n) {
@@ -264,10 +290,8 @@ article, section, #intro {
 :not([type=submit]):optional {
     border-style: dashed;
 }
-#topics ul {
-    -webkit-column-count: 3;
-    column-count: 3; 
-}
+/*#endregion*/
+/*#region Layout */
 
 #about {
     display: -webkit-box;
@@ -277,9 +301,11 @@ article, section, #intro {
                 url('about_palermo_right.png')top right,
                 #ffffff;
     background-repeat: no-repeat;
+    background-origin: border-box,border-box;
     background-size: auto, contain;           
 }
-
+/*#endregion*/
+/*#region Colors */
 #title:hover {
     opacity: 0.75;  
 }
@@ -313,35 +339,14 @@ body {
                  #432100 30%,
                  #00aaaa 70%);
 }
-.grad {
-    background: #ffffff;
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFFFFF', endColorstr='#00AAAA'); /* IE6 & IE7 */ 
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFFFFF', endColorstr='#00AAAA')"; /* IE8 */ 
-    background: -webkit-linear-gradient(#FFFFFF, #00AAAA); /*new webkit*/ 
-    background: -ms-linear-gradient(bottom, #FFFFFF 50%, #00AAAA 50%); /* IE10 */ 
-    background: linear-gradient(#ffffff, #00aaaa);/*future CSS3browsers*/
-}
+/*#endregion*/
+/*#region Borders */
 
 input {
     border-radius: 1em;
 }
 
-#topics ul {
-    border-radius: 2em;
-}
 
-#topics li:first-child {
-    border-top-left-radius: 2em;
-}
-#topics li:nth-child(4) {
-    border-bottom-left-radius: 2em;
-}
-#topics li:nth-child(9) {
-    border-top-right-radius: 2em;
-}
-#topics li:last-child {
-    border-bottom-right-radius: 2em;
-}
 
 #content {
     border-radius: 2em;
@@ -358,38 +363,44 @@ article, section {
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em; 
 }
+input:focus {
+    box-shadow:                     0 0 0.25em 0.125em #AA5500;
 
-#topics ul {
-    box-shadow: .5em .5em .5em #555555;
-}
-:focus {
-    box-shadow: 0 0 0.25em 0.125em #aa5500;
-}
+
+
 
 #content {
-    box-shadow:                 0 0 0.5em 0.16em #555555,                  
-                                0.50em 0.50em 3em #0055AA,                  
-                                -0.25em 0 3em #0055AA;
+    box-shadow: 0 0 0.5em 0.16em #555555,                  
+                0.50em 0.50em 3em #0055AA,                  
+               -0.25em 0 3em #0055AA;
+
 }
 
-
+/*#endregion*/
+/*#region Transforms */
 
 #topics li:nth-child(9):hover h1 {
     -webkit-transform:  scale(1.25) skew(44deg, -4deg);
     -ms-transform:      scale(1.25) skew(44deg, -4deg);
     transform:          scale(1.25) skew(44deg, -4deg);
 }
-
+/*#endregion*/
+/*#region Animations */
 #title {
     -webkit-transform: all 3s;
     -ms-transform: all 3s;
 }
 #title:hover {
     color: #ffffff;
-    -webkit-transform: scale(1.15);
-    -ms-transform: scale(1.15);
+    
 }
-
+/*#endregion*/
+.no-csscolumns #topics li {
+    display:                        inline-block;
+    width:                          13em;
+    float:                          left;
+}
+/*#region Media Queries */
 
 @media screen and (max-width:800px), (max-device-width:800px) {
     body {
@@ -409,6 +420,8 @@ article, section {
         float:                          left;
         padding-left:                   1.5em;
         padding-right:                  1.5em;
+        padding-top:                    0.125em;
+        padding-bottom:                 0.125em;
     }
     #title, #subtitle {
         font-size: 2em;
@@ -416,6 +429,8 @@ article, section {
     #title {
         -webkit-transition: 0s;
         -ms-transition: 0s;
+        -transition:                     0s;                 
+        font-size:                      4em; 
     }
     #about {
         display: inherit;
@@ -435,6 +450,9 @@ article, section {
     }
      #content {
         width: 35em;
+    }
+    nav a {
+        color:  #FFEDDB   
     }
      article, section, footer {
         width: 33em;    
@@ -470,7 +488,13 @@ article, section {
                             scale(1.5);
     }
     #topics li {
-        padding:     0.4375em;
+        display:                        inline-block;
+        width:                          5.5em;
+        float:                          left;
+        padding-left:                   0.25em;
+        padding-right:                  0.25em;
+        padding-top:                    0.125em;
+        padding-bottom:                 0.125em;
     }
     #topics li p {
         font-size:   0.8125em;
@@ -510,7 +534,8 @@ article, section {
     -webkit-column-gap:             0;    
     column-gap:                     0;
 }
-/* take from border*/
+
+/* taken from borders */
 .csscolumns #topics ul {
     border-radius: 2em;
 }
