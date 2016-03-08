@@ -483,6 +483,12 @@ article, section {
         transform:          scale(1.15);
     }
 }
+.no-csscolumns #topics li {
+    display: inline-block;
+    width: 13em;
+    float: left;
+}
+
 .no-textshadow nav a {
     color: #ffbb77;
     font-weight: bold;
@@ -498,40 +504,44 @@ article, section {
 
 
 /* taken from layout */
-#topics ul {
+.csscolumns #topics ul {
     -webkit-column-count:           3;    
     column-count:                   3;
     -webkit-column-gap:             0;    
     column-gap:                     0;
 }
 /* take from border*/
-#topics ul {
+.csscolumns #topics ul {
     border-radius: 2em;
 }
-#topics li:first-child {
+.csscolumns #topics li:first-child {
     border-top-left-radius: 2em;
 }
 
-#topics li:nth-child(4) {
+.csscolumns #topics li:nth-child(4) {
     border-bottom-left-radius: 2em;
 }
-#topics li:nth-child(9) {
+.csscolumns #topics li:nth-child(9) {
     border-top-right-radius: 2em;
 }
 
-#topics li:last-child {
+.csscolumns #topics li:last-child {
     border-bottom-right-radius: 2em;
 }
 
-#topics ul  {
+.csscolumns #topics ul  {
     box-shadow: .5em .5em .5em #555555;
 }
 /*take from colors*/
-.grad {
+.no-cssgradients .grad {
     background: #ffffff;
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFFFFF', endColorstr='#00AAAA'); /* IE6 & IE7 */ 
      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFFFFF', endColorstr='#00AAAA')"; /* IE8 */ 
-     background: -webkit-linear-gradient(#FFFFFF, #00AAAA); 
-    background: -ms-linear-gradient(bottom, #FFFFFF 50%, #00AAAA); 
-    background: linear-gradient(#FFFFFF, #00AAAA);
+     
+}
+
+.cssgradients  .grad {
+   background: -webkit-linear-gradient(bottom,#ffffff, #00aaaa);
+   background: -ms-linear-gradient(bottom,#ffffff, #00aaaa);
+   background: linear-gradient(bottom,#ffffff, #00aaaa); 
 }
