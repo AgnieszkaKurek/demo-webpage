@@ -491,6 +491,9 @@ article, section {
 .no-textshadow nav a :hover {
     color: #ffeddb;
 }
+.no-cssgradients * {
+    border-radius: 0!important;
+}
 
 
 
